@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logical Operators</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <input type="text" id="age" value="18">
+    <button type="button" onclick="isNanFunction()">Try it</button>
+    <script>
+        // Comparing Values and Variables using logical operators
+        // == equal to
+        let x=5;
+        document.getElementById("demo").innerHTML = x == "5";
+
+        // equal value and equal type
+        document.getElementById("demo2").innerHTML = x === "5";
+
+        // != Not equal
+        document.getElementById("demo3").innerHTML = x != 8;
+
+        // !== not equal value or not equal type
+        document.getElementById("demo4").innerHTML = x !== 8;
+
+        // > greater than
+        // < less than
+        // >= greater than or equal to
+        // <= less than or equal to
+        // && and (logical AND)
+        // || OR (logical OR)
+        // () ?: ternery operator
+        // Nan which is always false
+
+        function myFunction(){
+            let age = document.getElementById("age").value;
+            let range =  (age < 18) ? "Too young":"Old enough"
+
+            document.getElementById("demo5").innerHTML = range + " to vote."
+        }
+
+        function isNanFunction(){
+            let range;
+            let age = Number(document.getElementById("age").value);
+
+            if (isNaN(age)) {
+                range = "Input is not a number"
+            } else {
+                range =  (age < 18) ? "Too young":"Old enough"
+            }
+            document.getElementById("demo5").innerHTML = range + " to vote."
+        }
+    </script>
+</body>
+</html>

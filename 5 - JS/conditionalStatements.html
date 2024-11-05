@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Conditional Statements</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+
+    <!-- 
+    If - to specify a block of code if the specified condition is true
+    else - to specify a block of code if the specified condition is flase
+    else if - to specify a new condition to test, if the first condition is false
+    switch - to specify different/many alternative block of codes that are executed
+    -->
+
+    <script>
+        // If statement
+        if (new Date().getHours() < 20){
+            document.getElementById("demo").innerHTML = "Good day!"
+        }
+
+        //If else statement
+        const hour = new Date().getHours();
+        let greeting;
+        if (hour < 20) {
+            greeting = "Good day!"
+        }
+        else {
+            greeting = "Good evening!"
+        }
+        document.getElementById("demo2").innerHTML = greeting;
+
+        //else if
+        const hour2 = new Date().getHours();
+        let greeting2;
+        if (hour < 10) {
+            greeting2 = "Good morning"
+        }
+        else if (hour < 20 ) {
+            greeting2 = "Good day"
+        }
+        else {
+            greeting2 = "Good evening"
+        }
+        document.getElementById("demo3").innerHTML = greeting2;
+
+        //switch case statement
+        let day;
+        switch (new Date().getDay()){
+            case 0:day = "Sunday";break;
+            case 1:day = "Monday";break;
+            case 2:day = "Tuesday";break;
+            case 3:day = "Wednesday";break;
+            case 4:day = "Thursday";break;
+            case 5:day = "Friday";break;
+            case 6:day = "Saturday";
+        }
+        document.getElementById("demo4").innerHTML = "Today is " + day;
+    </script>
+</body>
+</html>
