@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Object</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <script>
+        //Variables (var, let, const)
+        x = 5;
+        y = 6;
+        z = x+y;
+
+        document.getElementById("demo").innerHTML = "The Value of z is: " + z;
+
+        // led
+        let p = 10;
+        {
+            let p = 2;
+        }
+        document.getElementById("demo2").innerHTML = "The Value of let is: " + p;
+
+        //create an array
+        const car = ["Saab", "Volvo", "BMW"];
+        //Change the element
+        car[0] = "Toyota";
+        //Add an element
+        car.push("Audi");
+        //display the array
+        document.getElementById("demo3").innerHTML = car;
+
+        //Create an object
+        const kotse = {type:"Fiat", model:"2024", color:"white"}
+        //Change property
+        kotse.color="red";
+        //Add a property
+        kotse.owner = "Vinard";
+        //display the property
+        document.getElementById("demo4").innerHTML = "The car owner is " + kotse.owner;
+
+        const person = {}
+        //add properties
+       person.firstName = "Jane";
+       person.lastName = "Doe";
+       person.age = 26;
+       person.eyeColor = "blue";
+       
+       //display the data 
+       document.getElementById("demo5").innerHTML = person.firstName + " is " + person.age + " years old.";
+
+
+        const tao = {
+            firstName:"Jane",
+            lastName:"Doe",
+            id: 1122,
+            fullName: function() {
+                return this.firstName+ " " + this.lastName;
+            }
+        }   
+        document.getElementById("demo6").innerHTML = tao.fullName();
+
+    </script>
+</body>
+</html>
