@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        /*
+        Different kinds of Loops
+        for - loops through a block of code a number of times
+        for/in - loops through properties of an object
+        for/of - loops the values of iterable objects
+        while - loops through a block of code while a specidfied conditions is true
+        do/while - loops through a block of code while a specified conditions is true
+        */
+        const number = [45, 4, 5, 16, 25];
+        let text = "";
+        const cars = ["BMW", "Volvo", "Mini"];
+        const word = "Javascript"
+        let i = 0;
+
+        // For Loop
+        function forLoop(){
+        for (let i=0;i<5;i++){
+            text += "the number is " + i + "<br>"
+        }
+        return text
+        }
+
+        // For In Loop
+        function forInLoop(){
+            for (let x in number) {
+                text +=number[x] + "<br>"
+            }
+            return text
+        }
+
+        // For each
+        function myForEach(value, index, array){
+            text += value + "<br>"
+        }
+
+        // For of Loop
+        function forOfLoop(){
+            for(let x of cars){
+                text += x + "<br>"
+            }
+            return text
+        }
+
+        // for loop within a word
+        function loopInWord(){
+            for (let x of word){
+                text += x + "<br>";
+            }
+            return text;
+        }
+
+        // while Loop
+        function whileLoop(){
+            while (i<10){
+                text += "<br>Hello World " + i;
+                i++;
+            }
+            return text;
+        }
+
+        // Do While Loop
+        function doWhileLoop(){
+            do {
+                text += "<br>Hello World " + i;
+                i++;
+            } while (i<10);
+            return text;
+        }
+
+        document.getElementById("demo").innerHTML = doWhileLoop();
+    </script>
+</body>
+</html>
