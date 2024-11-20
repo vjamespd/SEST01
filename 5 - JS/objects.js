@@ -55,7 +55,7 @@ console.log("Firstname: ", pangalan);
 console.log("Lastname: ", apilyedo);
 console.log("Age: ", edad);
 
-// Spread Operator - pass the key: value from na object to another object
+// Spread Operator - pass the key: value from an object to another object
 const grades = {
   math: 94,
   english: 90,
